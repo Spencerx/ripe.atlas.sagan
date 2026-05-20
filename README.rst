@@ -234,8 +234,8 @@ decades reaching out to the public about the wonders of the cosmos?
 .. _John Bond: https://github.com/b4ldr
 .. _Pier Carlo Chiodi: https://github.com/pierky
 .. _Sagan: https://en.wikipedia.org/wiki/Carl_Sagan
-.. |Documentation| image:: https://readthedocs.org/projects/ripe-atlas-sagan/badge/?version=latest
-   :target: http://ripe-atlas-sagan.readthedocs.org/en/latest/?badge=latest
+.. |Documentation| image:: https://readthedocs.org/projects/ripe-atlas-sagan/badge/?version=stable
+   :target: https://ripe-atlas-sagan.readthedocs.org/en/stable/?badge=stable
    :alt: Documentation Status
 .. |PYPI Version| image:: https://img.shields.io/pypi/v/ripe.atlas.sagan.svg
    :target: https://pypi.org/project/ripe.atlas.sagan/
