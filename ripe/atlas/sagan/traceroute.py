@@ -217,10 +217,8 @@ class TracerouteResult(Result):
 
     def _parse_hops(self, parse_all_hops=True, **kwargs):
 
-        try:
-            hops = self.raw_data["result"]
-            assert(isinstance(hops, list))
-        except (KeyError, AssertionError):
+        hops = self.raw_data.get("result")
+        if not isinstance(hops, list):
             self._handle_malformation("Legacy formats not supported")
             return
 

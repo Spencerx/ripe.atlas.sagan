@@ -12,11 +12,12 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+import re
 import sys
 import os
 
-__version__ = None
-exec(open("../ripe/atlas/sagan/version.py").read())
+with open("../ripe/atlas/sagan/version.py") as f:
+    __version__ = re.search(r'^__version__\s*=\s*["\']([^"\']+)["\']', f.read(), re.M).group(1)
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
