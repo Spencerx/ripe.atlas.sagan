@@ -1,5 +1,10 @@
 Changelog
 =========
+* 2.0.1
+    * Fixed unsafe use of exec() to read version in setup.py and docs/conf.py
+    * Fixed improper assertion in traceroute hop parsing
+    * Pinned PyPI publish GitHub Action to full commit SHA
+    * Acknowledged MD5/SHA1 certificate fingerprints as display-only (no security use)
 * 2.0.0
     * Official supported Python versions changed to 3.10, 3.11, 3.12 and 3.13
     * Removed test on invalid country codes in SSL certs, in line with the behaviour of the cryptography library
