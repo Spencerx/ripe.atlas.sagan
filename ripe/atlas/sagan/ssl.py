@@ -65,8 +65,8 @@ class Certificate(ParsingDict):
         cert = x509.load_pem_x509_certificate(data.encode("ascii"), openssl.backend)
 
         if cert:
-            self.checksum_md5 = self._colonify(cert.fingerprint(hashes.MD5()))
-            self.checksum_sha1 = self._colonify(cert.fingerprint(hashes.SHA1()))
+            self.checksum_md5 = self._colonify(cert.fingerprint(hashes.MD5()))  # nosec B303 - reporting cert fingerprint only, not used for security
+            self.checksum_sha1 = self._colonify(cert.fingerprint(hashes.SHA1()))  # nosec B303 - reporting cert fingerprint only, not used for security
             self.checksum_sha256 = self._colonify(cert.fingerprint(hashes.SHA256()))
 
             self.valid_from = pytz.utc.localize(cert.not_valid_before)
