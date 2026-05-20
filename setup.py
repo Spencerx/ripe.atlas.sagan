@@ -1,9 +1,10 @@
 import os
+import re
 from os.path import abspath, dirname, join
 from setuptools import setup
 
-__version__ = None
-exec(open("ripe/atlas/sagan/version.py").read())
+with open("ripe/atlas/sagan/version.py") as f:
+    __version__ = re.search(r'^__version__\s*=\s*["\']([^"\']+)["\']', f.read(), re.M).group(1)
 
 name = "ripe.atlas.sagan"
 install_requires = [
